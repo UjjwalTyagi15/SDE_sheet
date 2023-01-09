@@ -27,5 +27,9 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ]
+  ],
+  "files.associations": {
+    "*.rmd": "markdown",
+    "array-kdane's_algo": "cpp"
+  }
 }

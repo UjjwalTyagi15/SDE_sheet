@@ -1,4 +1,4 @@
-// make a 2d empty ans vector.start iterating from 1 to the number of rows (including rows) .in each iteration make a vector of all 1s sized equal to the row's number . iterate that vector from index 1 to second last index and fill jth index with j-1th and jth index of last row .
+// make a 2d empty ans vector.start iterating from 1 to the number of rows (including rows) .in each iteration make a vector of all 1s sized equal to the row's number . iterate that vector from index 1 to second last index and fill jth index with j-1th and jth index of last row .w
 
 #include<bits/stdc++.h>
 

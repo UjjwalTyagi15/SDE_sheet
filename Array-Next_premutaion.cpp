@@ -1,3 +1,7 @@
+// start from the end and find the number which is less than its succesive number (a[i]<a[i+1]). now if there is no such number that is the numbers are in decending order then just simply reverse the list and return . else start another iteration from end till i and find the first number greater than a[i] .replace them and reverse all the numbers next to ith index
+
+#include<bits/stdc++.h>
+
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
