@@ -1,0 +1,17 @@
+// rather than shifting all zeroes to right . shift all numbers to left
+
+
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+    int l = 0, cur = 0;
+    
+    while(cur < nums.size()) {
+        if(nums[cur] != 0) {
+            swap(nums[l], nums[cur]);
+            l++;
+        }
+        
+        cur++;
+    }
+}};
