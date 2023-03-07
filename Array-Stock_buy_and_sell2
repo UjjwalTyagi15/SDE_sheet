@@ -1,0 +1,20 @@
+// start with low as 0 and iterate with i .
+// if at any step i is less than low . make low =i;
+// if at any step i is greater than low , add it to the profit and make i as low  basically starting from i now ; 
+
+
+class Solution {
+public:
+    int maxProfit(vector<int>& nums) {
+        int low=0,profit=0;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]<nums[low])low=i;
+            else if(nums[i]>nums[low])
+            {
+                profit+=nums[i]-nums[low];
+                low=i;
+            }
+        }
+        return profit;
+    }
+};
