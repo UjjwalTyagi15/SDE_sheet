@@ -1,0 +1,31 @@
+// start iteration from the beginnning and make a hash table which records each frequency of reminder.
+// before starting add 0 in the hash table as it has already happened once before starting .
+// so hash table has 1 entry that is 0 having freq 1 
+// now at every iteration keep add the numbers to sum and check the remainder 
+// if the remainder has occoured before then add the frequence of that remainder to ans and increment the frequency by 1 now as it has occoured again.
+// for negative remainder always add K to make it positive and avoidd shit
+
+
+
+class Solution {
+public:
+
+    int subarraysDivByK(vector<int>& nums, int k) {
+    unordered_map<int,int> mp;
+    mp[0]=1;
+    int sum=0;
+    int ans=0;
+    for(int i=0;i<nums.size();i++){
+        sum+=nums[i];
+        int rem=sum%k;
+        if(rem<0)rem+=k;
+        if(mp[rem])
+        {
+            ans+=mp[rem];
+        }
+        mp[rem]++;         
+
+    } 
+    return ans;
+    }
+};
