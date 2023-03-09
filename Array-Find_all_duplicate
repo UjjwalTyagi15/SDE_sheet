@@ -1,0 +1,22 @@
+// first of all think of all the numbers as index+1 as they r from 1 to n;
+// now start iterating from start and take the absolute value of every number ,if the first number is 4 then go to (4-1) index and make that number negative 
+// now move to next number and take its absolute value . if the next number is 2 then go to 2-1 index and make that number negative 
+// now whenever we find that the index we visit already have a negative number means that index is already visited means nums[i] is a repeated number so we add it to the array 
+// we take the absolute value whenever we go to an index or we add the value to ans as we could ve negated it when we visited it 
+
+
+
+class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+        vector<int> ans;
+
+        for(int i=0;i<nums.size();i++){
+            if(nums[abs(nums[i])-1]<0) {
+                ans.push_back(abs(nums[i]));
+            }
+            else nums[abs(nums[i])-1]=-nums[abs(nums[i])-1];
+        }
+        return ans;
+    }
+};
