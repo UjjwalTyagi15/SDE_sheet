@@ -3,7 +3,7 @@
 // now move to next number and take its absolute value . if the next number is 2 then go to 2-1 index and make that number negative 
 // now whenever we find that the index we visit already have a negative number means that index is already visited means nums[i] is a repeated number so we add it to the array 
 // we take the absolute value whenever we go to an index or we add the value to ans as we could ve negated it when we visited it 
-
+// 1
 
 
 class Solution {
