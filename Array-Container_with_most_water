@@ -1,0 +1,30 @@
+// set 2 pointers on left and right of the array. and set a loop while left<right
+// if the pole on left is greater than the one on the right then keep on shifting the right pole till u find a pole greater than the current right pole .
+// similarly for left . if right pole is greater then  shift the left to nexrt greater pole as it is the only possibility to have more area.
+
+
+
+class Solution {
+public:
+    int maxArea(vector<int>& nums) {
+        int l=0;
+        int r=nums.size()-1;
+        int ans=0;
+
+        while(l<r){
+            int vol=(r-l)*min(nums[l],nums[r]);
+            ans=max(ans,vol);
+            if(nums[l]<=nums[r]){
+                int temp=nums[l];
+                while(l<r && nums[l]<=temp)l++;
+
+            }
+            else{
+                int temp=nums[r];
+                while(l<r && nums[r]<=temp)r--;
+            }
+        }
+        return ans;
+        
+        }
+};
