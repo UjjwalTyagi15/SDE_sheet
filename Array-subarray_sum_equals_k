@@ -1,0 +1,26 @@
+// we make a hash table and add the freq of sum=0 as 1 keep adding the sum of all the digits we have visited so far .
+// now at every step we will check that if the current sum that we have so far is at an exact differece of k from any prevoius sum . that means 
+// eg {1,2,3,4,5} if k = 5 . our map has sums as 
+// 0-1 starting off the map with freq of 0 as sum to be 1
+// 1-1 adding first digit 1 and the freq is 1 
+// 3-1 adding second digit 2 and the freq of sum as 3 is 1
+// 6-1 adding third digit 3 making the sum as 6 . but we notice that the sum 6 is exactly k=5 away from sum 1. means in the map there is a previous sum=sum-k;incrementing our ans 
+// 10-1 
+// 15-1 we have sum as 10 previously which is 5 away from 15 
+
+
+
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        unordered_map<int,int>map;
+        int sum=0,ans=0;
+        map[sum]=1;
+        for(int i=0;i<nums.size();i++){
+            sum+=nums[i];
+            ans+=map[sum-k];
+            map[sum]++;
+        }
+        return ans;
+    }
+};
