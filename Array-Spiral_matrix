@@ -1,0 +1,33 @@
+// basically set 4 pointers -row start,row end,col start,col end.
+
+
+
+class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& nums) {
+       int rs=0,re=nums[0].size()-1;
+       int cs=0,ce=nums.size()-1;
+       vector<int> ans;
+        while(rs<=re && cs<=ce){
+            for(int i=rs;i<=re;i++){
+                ans.push_back(nums[cs][i]);
+            }cs++;
+            if(rs>re || cs>ce)break;
+            for(int i=cs;i<=ce;i++){
+                ans.push_back(nums[i][re]);
+            }re--;
+            if(rs>re || cs>ce)break;
+            for(int i=re;i>=rs;i--){
+                ans.push_back(nums[ce][i]);
+            }ce--;
+            if(rs>re || cs>ce)break;
+            for(int i=ce;i>=cs;i--){
+                ans.push_back(nums[i][rs]);
+            }rs++;
+        }
+        return ans;
+
+
+
+    }
+};
