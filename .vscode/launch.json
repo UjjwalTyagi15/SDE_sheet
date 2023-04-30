@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/programs/Striver SDE sheet",
-      "program": "d:/programs/Striver SDE sheet/build/Debug/outDebug",
+      "cwd": "d:/programs/SDE sheet",
+      "program": "d:/programs/SDE sheet/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
